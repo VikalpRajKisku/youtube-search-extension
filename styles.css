@@ -1,0 +1,125 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-input: #141414;
+  --text-color: #ffffff;
+  --border-color: #3f3f3f;
+  --accent: #ffffff;
+  --accent-hover: #dddddd;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-color);
+  outline: none;
+  border-radius: 25px;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: #bbbbbb;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+.button {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--accent);
+  color: black;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--accent-hover);
+  color: black;
+}
+
+.button:focus {
+  outline: 2px solid var(--accent-hover);
+}
+
+/* Responsive layout */
+@media (max-width: 500px) {
+  .container {
+    padding: 16px;
+  }
+
+  .input,
+  .button {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+  }
+
+  .input,
+  .button {
+    background-color: var(--bg-input);
+    color: white;
+    border-color: var(--border-color);
+  }
+
+  .button {
+    background-color: var(--accent);
+    color: black;
+  }
+
+  .button:hover {
+    background-color: var(--accent-hover);
+    color: black;
+  }
+}
+
+body, img, .logo, .input, .button {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
