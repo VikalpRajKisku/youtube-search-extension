@@ -3,7 +3,7 @@ function performSearch() {
   const query = input.value.trim();
 
   if (query) {
-    const formattedQuery = query.split(' ').join('+');
+    const formattedQuery = encodeURIComponent(query).replace(/%20/g, '+');
     const url = `https://www.youtube.com/results?search_query=${formattedQuery}`;
 
     void chrome.tabs.create({ url });

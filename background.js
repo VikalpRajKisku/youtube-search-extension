@@ -6,13 +6,15 @@ chrome.commands.onCommand.addListener((command) => {
       const existingTab = tabs.find(tab => tab.url?.startsWith(popupUrl));
 
       if (existingTab) {
-        chrome.tabs.update(existingTab.id, { active: true }, () => {
-          void chrome.scripting.executeScript({
-            target: { tabId: existingTab.id },
-            func: () => {
-              const input = document.getElementById("searchQuery");
-              if (input) input.focus();
-            }
+        chrome.windows.update(existingTab.windowId, { focused: true }, () => {
+          chrome.tabs.update(existingTab.id, { active: true }, () => {
+            void chrome.scripting.executeScript({
+              target: { tabId: existingTab.id },
+              func: () => {
+                const input = document.getElementById("searchQuery");
+                if (input) input.focus();
+              }
+            });
           });
         });
       } else {
