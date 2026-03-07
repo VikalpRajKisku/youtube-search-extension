@@ -1,5 +1,7 @@
 # YouTube Searcher Extension
 
+![YouTube Logo](assets/YouTube-Logo.wine.svg)
+
 A quick, powerful Manifest V3 Chrome Extension to search YouTube instantly through keyboard shortcuts, context menus, and a dedicated popup.
 
 ## Features

@@ -1,6 +1,6 @@
 chrome.commands.onCommand.addListener((command) => {
   if (command === "search_youtube") {
-    const popupUrl = chrome.runtime.getURL("index.html");
+    const popupUrl = chrome.runtime.getURL("src/index.html");
 
     chrome.tabs.query({}, (tabs) => {
       const existingTab = tabs.find(tab => tab.url?.startsWith(popupUrl));
