@@ -8,13 +8,7 @@ chrome.commands.onCommand.addListener((command) => {
       if (existingTab) {
         chrome.windows.update(existingTab.windowId, { focused: true }, () => {
           chrome.tabs.update(existingTab.id, { active: true }, () => {
-            void chrome.scripting.executeScript({
-              target: { tabId: existingTab.id },
-              func: () => {
-                const input = document.getElementById("searchQuery");
-                if (input) input.focus();
-              }
-            });
+            chrome.tabs.sendMessage(existingTab.id, { action: "focusSearch" }).catch(() => {});
           });
         });
       } else {

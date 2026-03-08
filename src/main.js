@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "focusSearch") {
+    const input = document.getElementById('searchQuery');
+    if (input) input.focus();
+  }
+});
