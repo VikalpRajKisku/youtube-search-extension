@@ -1,6 +1,6 @@
 # YouTube Searcher Extension
 
-![YouTube Logo](assets/YouTube-Logo.wine.svg)
+![Extension Screenshot](assets/screenshot.png)
 
 A quick, powerful Manifest V3 Chrome Extension to search YouTube instantly through keyboard shortcuts, context menus, and a dedicated popup.
 
@@ -8,7 +8,7 @@ A quick, powerful Manifest V3 Chrome Extension to search YouTube instantly throu
 
 - **Popup Search Panel:** Click the extension icon to instantly type and execute a YouTube Search.
 - **Context Menu Integration:** Select text on any webpage, right-click, and choose "Search on YouTube".
-- **Global Keyboard Shortcut:** Press `Alt+S` to immediately launch a dedicated, full-page search tab or pull an existing one right to the front.
+- **Global Keyboard Shortcut:** Press `Alt+S` (or `Option+S` on macOS) to immediately launch a dedicated, full-page search tab or pull an existing one right to the front.
 - **Smart Window Tracking:** If you trigger a search by shortcut, it won't flood you with duplicate tabs. Instead, it locates your existing search tab, focuses its window, and selects the text field for you!
 
 ## Installation
@@ -25,10 +25,18 @@ Currently, this extension runs in Chrome's Developer Mode.
 ## Usage
 
 - Click the extension icon to search instantly in the popup.
-- Select text on any webpage, right-click to send the query.
-- Use `Alt+S` when needing an immediate standalone console.
+  
+  ![Popup Panel](assets/image.png)
 
-**Note on Shortcut Management:** Need to personalize the keybind? Navigate to `chrome://extensions/shortcuts` to reassign the default `Alt+S` action to any preferred combination.
+- Select text on any webpage, right-click to send the query.
+
+- Use `Alt+S` (or `Option+S` on macOS) when needing an immediate standalone console.
+
+  ![Alt](assets/alt_white.png) + ![S](assets/s_white.png)  *(Windows)*
+  
+  ![Option](assets/option_white.png) + ![S](assets/s_white.png)  *(macOS)*
+
+**Note on Shortcut Management:** Need to personalize the keybind? Navigate to `chrome://extensions/shortcuts` to reassign the default `Alt+S` (or `Option+S` on macOS) action to any preferred combination.
 
 ## Privacy & Security
 
