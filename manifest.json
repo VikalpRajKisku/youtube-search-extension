@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
   "name": "YouTube Searcher",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Open YouTube search tab using a keyboard shortcut.",
-  "permissions": ["tabs", "scripting", "contextMenus"],
+  "permissions": [
+    "tabs",
+    "scripting",
+    "contextMenus"
+  ],
   "background": {
     "service_worker": "src/background.js"
   },
@@ -18,7 +22,7 @@
   "commands": {
     "search_youtube": {
       "suggested_key": {
-        "default": "Ctrl+Y"
+        "default": "Alt+S"
       },
       "description": "Open YouTube search page"
     }
