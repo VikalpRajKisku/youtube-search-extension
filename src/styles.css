@@ -7,11 +7,16 @@
   --accent-hover: #dddddd;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  min-height: 100%;
   background-color: var(--bg-dark);
   color: var(--text-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -85,14 +90,24 @@ body {
 
 /* Responsive layout */
 @media (max-width: 500px) {
-  .container {
-    padding: 16px;
+  .logo {
+    max-width: 250px;
+    margin-bottom: 16px;
   }
 
-  .input,
+  .container {
+    padding: 12px;
+  }
+
+  .input {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
   .button {
     font-size: 1rem;
-    padding: 12px 14px;
+    padding: 10px 14px;
   }
 }
 
